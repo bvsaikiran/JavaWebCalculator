@@ -21,11 +21,25 @@
     <version>2.5</version>
 </dependency>
 </dependencies>
-<distributionManagement>
+  <build>
+      <plugins>
+  <plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.2</version>
+	  	<configuration>
+   		<url>http://13.40.107.189:8080</url>
+   		<server>TomcatServer</server>
+   		<path>/webapp-0.2</path>
+		  </configuration>
+  </plugin>
+  </plugins>
+  </build>
+<!--<distributionManagement>
   <repository>
     <id>releases</id>
-    <!-- <url>http://52.204.135.48:8081/nexus/content/repositories/releases</url> -->    
+     <url>http://52.204.135.48:8081/nexus/content/repositories/releases</url>    
     <url>http://binary.ibm.com/nexus/content/repositories/releases</url>
   </repository>
-</distributionManagement>
+</distributionManagement>--> 
 </project>
